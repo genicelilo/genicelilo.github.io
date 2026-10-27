@@ -1,21 +1,60 @@
 <!doctype html>
 <html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Genice &amp; Lilo</title>
+<title>Genice &amp; Lilo – Belajar Sambil Bermain</title>
+<meta name="description" content="Kartun pendek untuk anak: belajar warna, angka, huruf, hewan, dan bahasa Inggris bersama Genice dan Lilo.">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--pink:#ff6fae;--bg:#fff7fb;--tx:#33233a}
-body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--tx);line-height:1.6}
-.wrap{max-width:720px;margin:0 auto;padding:32px 16px}
-h1{color:var(--pink);font-size:2.4rem;margin:.2em 0}
-.card{background:#fff;border-radius:18px;padding:20px;margin:16px 0;box-shadow:0 4px 18px rgba(255,111,174,.15)}
-a.btn{display:inline-block;background:var(--pink);color:#fff;text-decoration:none;padding:12px 20px;border-radius:999px;font-weight:700}
-footer{font-size:.85rem;opacity:.7;margin-top:32px}
-</style></head><body><div class="wrap">
-<div style="font-size:3rem">🌈🐶</div>
+:root{--pk:#ff5fa8;--pk2:#ffd6ea;--sky:#7cc8ff;--tx:#3a2440;--bg:#fff8fc}
+*{box-sizing:border-box}body{margin:0;font-family:'Baloo 2',system-ui,sans-serif;color:var(--tx);background:var(--bg);line-height:1.5}
+a{color:inherit}
+.hero{background:linear-gradient(160deg,#8fd3ff 0%,#c8ecff 45%,#ffe3f1 100%);padding:48px 16px 90px;text-align:center;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;left:-5%;right:-5%;bottom:-60px;height:120px;background:var(--bg);border-radius:50%}
+.rb{font-size:64px;animation:b 2.4s ease-in-out infinite}@keyframes b{50%{transform:translateY(-10px)}}
+h1{font-size:clamp(44px,9vw,76px);margin:0;color:var(--pk);text-shadow:0 4px 0 #fff,0 6px 14px rgba(255,95,168,.35);line-height:1}
+.sub{font-size:20px;font-weight:700;margin:10px 0 24px}
+.btn{display:inline-block;background:var(--pk);color:#fff;text-decoration:none;padding:14px 28px;border-radius:999px;font-weight:800;font-size:19px;box-shadow:0 6px 0 #d63f86}
+.btn:active{transform:translateY(3px);box-shadow:0 3px 0 #d63f86}
+.wrap{max-width:960px;margin:0 auto;padding:0 16px}
+h2{font-size:30px;text-align:center;margin:42px 0 16px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.chip{background:#fff;border:3px solid var(--pk2);border-radius:999px;padding:6px 16px;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
+.ep{background:#fff;border-radius:18px;overflow:hidden;text-decoration:none;box-shadow:0 6px 18px rgba(255,95,168,.15);transition:transform .2s}
+.ep:hover{transform:translateY(-4px) rotate(-1deg)}
+.ep img{width:100%;aspect-ratio:9/12;object-fit:cover;display:block;background:var(--pk2)}
+.ep div{padding:8px 10px;font-weight:700;font-size:15px}
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.card{background:#fff;border-radius:20px;padding:18px;text-align:center;box-shadow:0 6px 18px rgba(124,200,255,.2)}
+.card b{display:block;font-size:20px;margin:4px 0}
+.cta{background:linear-gradient(120deg,var(--pk),#ff9ac8);color:#fff;border-radius:26px;padding:28px 18px;text-align:center;margin:44px 0}
+.cta .btn{background:#fff;color:var(--pk);box-shadow:0 6px 0 #ffd0e6}
+footer{text-align:center;font-size:14px;opacity:.75;padding:20px 16px 36px}
+</style></head><body>
+<header class="hero">
+<div class="rb">🌈🐶</div>
 <h1>Genice &amp; Lilo</h1>
-<p>Video kartun pendek untuk anak: belajar warna, angka, huruf, hewan, buah, dan bahasa Inggris dasar bersama Genice dan anjing poodle-nya, Lilo. Suara Genice diisi langsung oleh anak kami sendiri.</p>
-<p><a class="btn" href="https://www.youtube.com/@GeniceLilo">▶ Tonton di YouTube</a></p>
-<div class="card"><b>Tentang aplikasi "Genice YouTube"</b><br>
-Aplikasi ini adalah alat pribadi milik pemilik channel Genice &amp; Lilo untuk mengunggah video ke channel YouTube kami sendiri secara otomatis. Aplikasi ini tidak digunakan oleh publik.</div>
-<p><a href="privacy.html">Kebijakan Privasi</a></p>
-<footer>Kontak: erwin.khie.property@gmail.com</footer>
-</div></body></html>
+<div class="sub">Belajar sambil bermain bersama Genice dan anjing poodle-nya, Lilo!</div>
+<a class="btn" href="https://www.youtube.com/@GeniceLilo?sub_confirmation=1">▶ Tonton &amp; Subscribe</a>
+</header>
+<main class="wrap">
+<h2>Belajar apa saja? 📚</h2>
+<div class="chips"><span class="chip">🎨 Warna</span><span class="chip">🔢 Angka</span><span class="chip">🔤 Huruf</span><span class="chip">🐮 Hewan</span><span class="chip">🍌 Buah</span><span class="chip">⭐ Bentuk</span><span class="chip">🚗 Kendaraan</span><span class="chip">🥕 Sayur</span><span class="chip">🇬🇧 Bahasa Inggris</span></div>
+<h2>Episode terbaru 🎬</h2>
+<div class="grid">
+<a class="ep" href="https://youtube.com/shorts/KOXDhSDZMqc"><img src="https://i.ytimg.com/vi/KOXDhSDZMqc/hqdefault.jpg" alt="" loading="lazy"><div>Huruf A–F 🔤</div></a>
+<a class="ep" href="https://youtube.com/shorts/A6jkf8vT4DU"><img src="https://i.ytimg.com/vi/A6jkf8vT4DU/hqdefault.jpg" alt="" loading="lazy"><div>Tebak Buah 🍌</div></a>
+<a class="ep" href="https://youtube.com/shorts/dAu4q7gtK1M"><img src="https://i.ytimg.com/vi/dAu4q7gtK1M/hqdefault.jpg" alt="" loading="lazy"><div>Tebak Hewan 🐮</div></a>
+<a class="ep" href="https://youtube.com/shorts/ljddbP1bLpk"><img src="https://i.ytimg.com/vi/ljddbP1bLpk/hqdefault.jpg" alt="" loading="lazy"><div>Angka 1–10 🎈</div></a>
+<a class="ep" href="https://youtube.com/shorts/vf2-lMmO2go"><img src="https://i.ytimg.com/vi/vf2-lMmO2go/hqdefault.jpg" alt="" loading="lazy"><div>Warnanya Hilang! 🎨</div></a>
+</div>
+<h2>Kenapa anak suka? 💖</h2>
+<div class="feat">
+<div class="card">🎤<b>Suara asli anak</b>Suara Genice diisi langsung oleh anak kami sendiri.</div>
+<div class="card">🧩<b>Ayo menebak!</b>Anak diajak menebak bayangan benda sebelum muncul.</div>
+<div class="card">🇮🇩🇬🇧<b>Dua bahasa</b>Setiap kata dalam bahasa Indonesia dan Inggris.</div>
+<div class="card">🛡️<b>Aman untuk anak</b>Video pendek dan ceria, ditandai khusus anak di YouTube.</div>
+</div>
+<div class="cta"><h2 style="margin:0 0 6px">Video baru setiap Senin &amp; Kamis! 🗓️</h2><p style="margin:0 0 18px;font-weight:700">Jangan lupa subscribe supaya tidak ketinggalan.</p><a class="btn" href="https://www.youtube.com/@GeniceLilo?sub_confirmation=1">🔔 Subscribe Genice &amp; Lilo</a></div>
+</main>
+<footer>© 2026 Genice &amp; Lilo · <a href="privacy.html">Kebijakan Privasi</a> · erwin.khie.property@gmail.com</footer>
+</body></html>
