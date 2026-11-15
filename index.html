@@ -5,236 +5,280 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Genice & Lilo – Belajar Sambil Bermain</title>
 <meta name="description" content="Belajar warna, angka, huruf & hewan bareng Genice dan Lilo. Tonton di YouTube & TikTok, main game Genice's Pet Paradise di Roblox.">
-<meta property="og:title" content="Genice & Lilo">
+<meta property="og:title" content="Genice & Lilo – Belajar Sambil Bermain">
 <meta property="og:description" content="Belajar warna, angka, huruf & hewan bareng Genice dan Lilo 🐩💗 YouTube · TikTok · Roblox">
 <meta property="og:image" content="https://genicelilo.github.io/genice-lilo.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@500;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --pink:#ff5fa2; --pink-d:#e2408a; --pink-l:#ffe3ef; --cream:#fff8f1;
-    --coklat:#8a5a3c; --aprikot:#f2b48a; --ungu:#7b5cff; --teks:#3b2a33; --abu:#7d6a74;
+    --pink:#ff5fa2; --pink-d:#e2408a; --pink-l:#ffe3ef; --cream:#fffaf4;
+    --coklat:#7a4a2e; --ungu:#8b6cff; --biru:#3aa8ff; --hijau:#3ccf8e; --kuning:#ffc93c; --oranye:#ff8a3d;
+    --teks:#3b2a33; --abu:#7d6a74;
     --yt:#ff0033; --tt:#111; --rb:#1e88ff;
+    --judul:'Baloo 2','Nunito',system-ui,-apple-system,'Segoe UI',sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{font-family:'Nunito',system-ui,sans-serif;color:var(--teks);background:var(--cream);line-height:1.55;padding-bottom:84px}
-  h1,h2,h3{font-family:'Baloo 2',cursive;line-height:1.1}
+  body{font-family:'Nunito',system-ui,-apple-system,'Segoe UI',sans-serif;color:var(--teks);background:var(--cream);line-height:1.55;padding-bottom:86px;overflow-x:hidden}
+  h1,h2,h3{font-family:var(--judul);line-height:1.1;font-weight:800}
   a{color:inherit}
   .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
 
-  /* NAV */
-  nav{position:sticky;top:0;z-index:50;background:rgba(255,248,241,.92);backdrop-filter:blur(8px);border-bottom:2px solid var(--pink-l)}
-  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
-  .logo{font-family:'Baloo 2';font-weight:800;font-size:1.45rem;color:var(--pink);text-decoration:none}
-  .logo span{color:var(--coklat)}
-  .menu{display:flex;gap:18px;font-weight:700;font-size:.95rem}
-  .menu a{text-decoration:none;color:var(--abu)}
-  .menu a:hover{color:var(--pink)}
-  @media(max-width:640px){.menu{display:none}}
+  /* ===== HEADER (logo di tengah) ===== */
+  header.atas{position:sticky;top:0;z-index:50;background:rgba(255,250,244,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 4px 20px rgba(226,64,138,.08)}
+  .logo-baris{display:flex;justify-content:center;align-items:center;gap:10px;padding:10px 0 4px;text-decoration:none}
+  .logo-baris img{width:46px;height:46px;border-radius:50%;object-fit:cover;object-position:20% 30%;background:var(--pink-l);border:3px solid #fff;box-shadow:0 3px 10px rgba(226,64,138,.3)}
+  .logo-teks{font-family:var(--judul);font-weight:800;font-size:1.75rem;letter-spacing:.3px;
+    background:linear-gradient(90deg,var(--pink-d),var(--pink) 40%,var(--ungu));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .logo-teks b{color:var(--kuning);-webkit-text-fill-color:var(--kuning);font-weight:800}
+  .menu{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;padding:4px 12px 10px}
+  .menu::-webkit-scrollbar{display:none}
+  @media(max-width:480px){.menu{display:none}.logo-baris{padding:10px 0}.logo-teks{font-size:1.55rem}.hias{display:none}.panggung{width:min(290px,76vw)}}
+  .menu a{flex:none;text-decoration:none;font-weight:800;font-size:.86rem;padding:6px 14px;border-radius:999px;background:#fff;border:2px solid var(--pink-l);color:var(--pink-d);transition:.2s}
+  .menu a:hover{background:var(--pink);color:#fff;border-color:var(--pink)}
 
-  /* HERO */
-  .hero{background:radial-gradient(circle at 15% 20%,#fff 0,transparent 40%),linear-gradient(160deg,#ffd6e8 0%,#ffeaf3 55%,var(--cream) 100%);padding:56px 0 64px;overflow:hidden;position:relative}
-  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
-  .hero h1{font-size:clamp(2.4rem,6vw,3.8rem);color:var(--pink-d)}
-  .hero h1 small{display:block;font-size:.45em;color:var(--coklat);font-weight:700;margin-bottom:6px}
-  .hero p{font-size:1.15rem;margin:14px 0 26px;color:var(--teks);max-width:30em}
-  .btns{display:flex;flex-wrap:wrap;gap:12px}
-  .btn{display:inline-flex;align-items:center;gap:9px;padding:13px 22px;border-radius:999px;font-weight:800;text-decoration:none;font-size:1rem;color:#fff;box-shadow:0 6px 0 rgba(0,0,0,.15);transition:transform .15s,box-shadow .15s}
-  .btn:hover{transform:translateY(-2px);box-shadow:0 8px 0 rgba(0,0,0,.15)}
-  .btn:active{transform:translateY(3px);box-shadow:0 2px 0 rgba(0,0,0,.15)}
+  /* ===== HERO ===== */
+  .hero{position:relative;text-align:center;padding:34px 0 120px;overflow:hidden;
+    background:radial-gradient(circle at 20% 15%,#fff7 0 60px,transparent 61px),radial-gradient(circle at 85% 30%,#fff6 0 90px,transparent 91px),
+               linear-gradient(180deg,#ffd3e7 0%,#ffe6f1 45%,#efe6ff 100%)}
+  .panggung{position:relative;width:min(340px,82vw);aspect-ratio:1;margin:0 auto 10px}
+  .matahari{position:absolute;inset:8%;border-radius:50%;background:radial-gradient(circle,#fff 0 45%,#fff3c4 46% 62%,#ffe08a 63%);box-shadow:0 0 0 14px #ffffff66,0 0 0 30px #ffffff33,0 20px 50px rgba(255,170,60,.35)}
+  .sinar{position:absolute;inset:-4%;border-radius:50%;background:repeating-conic-gradient(#ffd96a55 0 10deg,transparent 10deg 20deg);animation:putar 30s linear infinite;
+    -webkit-mask:radial-gradient(circle,transparent 48%,#000 49%,#000 68%,transparent 70%);mask:radial-gradient(circle,transparent 48%,#000 49%,#000 68%,transparent 70%)}
+  .panggung img{position:absolute;left:4%;right:4%;bottom:12%;width:92%;filter:drop-shadow(0 10px 14px rgba(122,74,46,.25));animation:goyang 3.4s ease-in-out infinite}
+  @keyframes putar{to{transform:rotate(360deg)}}
+  @keyframes goyang{50%{transform:translateY(-8px) rotate(-1deg)}}
+  .gelembung{position:absolute;background:#fff;border-radius:20px;padding:7px 14px;font-weight:800;font-size:.9rem;box-shadow:0 6px 16px rgba(226,64,138,.18);animation:goyang 3s ease-in-out infinite;white-space:nowrap}
+  .gelembung::after{content:"";position:absolute;bottom:-7px;width:14px;height:14px;background:#fff;transform:rotate(45deg)}
+  .g1{top:2%;left:-6%;color:var(--pink-d)} .g1::after{left:22px}
+  .g2{top:14%;right:-8%;color:var(--coklat);animation-delay:.7s} .g2::after{right:22px}
+
+  .hero h1{font-size:clamp(2.3rem,7vw,4rem);color:#fff;letter-spacing:.5px;
+    text-shadow:0 3px 0 var(--pink-d),0 6px 0 #c9306f,0 10px 18px rgba(201,48,111,.35);
+    -webkit-text-stroke:1px var(--pink-d);paint-order:stroke fill}
+  .hero h1 .warna span{display:inline-block;animation:loncat 2.4s ease-in-out infinite}
+  @keyframes loncat{0%,80%,100%{transform:translateY(0)}40%{transform:translateY(-8px)}}
+  .salam{display:inline-block;background:#fff;color:var(--pink-d);font-weight:800;padding:6px 16px;border-radius:999px;margin-bottom:12px;box-shadow:0 4px 12px rgba(226,64,138,.15)}
+  .hero p.isi{font-size:1.12rem;max-width:32em;margin:14px auto 26px;color:#5a3d4a;font-weight:600}
+  .btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+  .btn{display:inline-flex;align-items:center;gap:9px;padding:13px 24px;border-radius:999px;font-weight:800;text-decoration:none;font-size:1.02rem;color:#fff;box-shadow:0 6px 0 rgba(0,0,0,.18);transition:transform .15s,box-shadow .15s;position:relative;overflow:hidden}
+  .btn::before{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(90deg,transparent,#ffffff55,transparent);transform:skewX(-20deg);animation:kilau 3.5s ease-in-out infinite}
+  @keyframes kilau{0%,60%{left:-60%}100%{left:130%}}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 8px 0 rgba(0,0,0,.18)}
+  .btn:active{transform:translateY(4px);box-shadow:0 2px 0 rgba(0,0,0,.18)}
   .btn svg{width:22px;height:22px;flex:none}
-  .b-yt{background:var(--yt)} .b-tt{background:var(--tt)} .b-rb{background:var(--rb)} .b-pink{background:var(--pink)}
-  .b-putih{background:#fff;color:var(--teks)}
+  .b-yt{background:var(--yt)} .b-tt{background:var(--tt)} .b-rb{background:var(--rb)} .b-putih{background:#fff;color:var(--teks)}
+  .hias{position:absolute;pointer-events:none;animation:goyang 4s ease-in-out infinite;font-size:1.7rem}
+  .awan{position:absolute;pointer-events:none;background:#fff;border-radius:999px;opacity:.85;height:34px;animation:geser 40s linear infinite}
+  .awan::before,.awan::after{content:"";position:absolute;background:#fff;border-radius:50%}
+  .awan::before{width:40px;height:40px;top:-20px;left:18px}.awan::after{width:30px;height:30px;top:-14px;left:48px}
+  @keyframes geser{from{transform:translateX(-30vw)}to{transform:translateX(130vw)}}
 
-  /* karakter (CSS) */
-  .duo{position:relative;height:320px}
-  .bubble{position:absolute;background:#fff;border-radius:22px;padding:10px 16px;font-weight:800;box-shadow:0 6px 18px rgba(226,64,138,.18);font-size:.95rem}
-  .bubble{z-index:2}.bubble.a{top:6px;left:8px;color:var(--pink-d)} .bubble.b{top:40px;right:0;color:var(--coklat)}
-  .foto{position:absolute;inset:50px 0 0 0;width:100%;height:calc(100% - 50px);object-fit:contain;filter:drop-shadow(0 12px 20px rgba(226,64,138,.25))}
-  .float{animation:naik 3.2s ease-in-out infinite}
-  .float2{animation:naik 3.2s ease-in-out infinite .8s}
-  @keyframes naik{50%{transform:translateY(-10px)}}
-  .deco{position:absolute;font-size:1.6rem;opacity:.75;animation:naik 4s ease-in-out infinite}
-  @media(max-width:760px){.hero .wrap{grid-template-columns:1fr}.duo{height:290px;order:-1}}
+  /* gelombang pemisah */
+  .ombak{position:absolute;left:0;right:0;bottom:-1px;line-height:0}
+  .ombak svg{width:100%;height:80px;display:block}
 
-  /* SECTIONS */
-  section{padding:64px 0}
-  .judul{text-align:center;margin-bottom:34px}
-  .judul .tag{display:inline-block;padding:5px 14px;border-radius:999px;font-weight:800;font-size:.85rem;margin-bottom:10px}
-  .judul h2{font-size:clamp(1.9rem,4.5vw,2.6rem)}
-  .judul p{color:var(--abu);max-width:36em;margin:8px auto 0}
+  /* ===== TOPIK berjalan ===== */
+  .topik-wrap{padding:28px 0 8px;overflow:hidden}
+  .topik-wrap h2{text-align:center;font-size:clamp(1.7rem,4.5vw,2.3rem);margin-bottom:16px}
+  .jalan{display:flex;gap:12px;width:max-content;animation:jalan 28s linear infinite}
+  .topik-wrap:hover .jalan{animation-play-state:paused}
+  @keyframes jalan{to{transform:translateX(-50%)}}
+  .chip{flex:none;padding:10px 20px;border-radius:18px;font-weight:800;font-size:1.05rem;color:#fff;box-shadow:0 5px 0 rgba(0,0,0,.12)}
 
-  .topik{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
-  .topik span{background:#fff;border:2px solid var(--pink-l);border-radius:999px;padding:8px 16px;font-weight:800;font-size:1rem}
-  /* 3 kartu platform */
+  /* ===== SECTION umum ===== */
+  section{padding:60px 0;position:relative}
+  .judul{text-align:center;margin-bottom:32px}
+  .judul .tag{display:inline-block;padding:6px 16px;border-radius:999px;font-weight:800;font-size:.85rem;margin-bottom:10px}
+  .judul h2{font-size:clamp(1.9rem,4.8vw,2.7rem)}
+  .judul p{color:var(--abu);max-width:34em;margin:8px auto 0;font-weight:600}
+  .garis{display:block;width:90px;height:8px;margin:12px auto 0;border-radius:99px;background:repeating-linear-gradient(90deg,var(--pink) 0 18px,var(--kuning) 18px 36px,var(--biru) 36px 54px)}
+
+  /* ===== 3 PLATFORM ===== */
   .platform{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-  .kartu{background:#fff;border-radius:26px;padding:26px;box-shadow:0 10px 30px rgba(59,42,51,.07);display:flex;flex-direction:column;gap:12px;border-top:7px solid;text-decoration:none;transition:transform .2s}
-  .kartu:hover{transform:translateY(-5px)}
-  .kartu .ik{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;color:#fff}
-  .kartu .ik svg{width:30px;height:30px}
-  .kartu h3{font-size:1.5rem}
-  .kartu p{color:var(--abu);flex:1}
-  .kartu .go{font-weight:800}
-  .k-yt{border-color:var(--yt)} .k-yt .ik{background:var(--yt)} .k-yt .go{color:var(--yt)}
-  .k-tt{border-color:var(--tt)} .k-tt .ik{background:var(--tt)} .k-tt .go{color:var(--tt)}
-  .k-rb{border-color:var(--rb)} .k-rb .ik{background:var(--rb)} .k-rb .go{color:var(--rb)}
+  .kartu{position:relative;border-radius:28px;padding:26px 24px 22px;color:#fff;text-decoration:none;display:flex;flex-direction:column;gap:10px;overflow:hidden;box-shadow:0 14px 30px rgba(0,0,0,.12);transition:transform .25s}
+  .kartu:hover{transform:translateY(-6px) rotate(-1deg)}
+  .kartu::after{content:"";position:absolute;right:-40px;top:-40px;width:150px;height:150px;border-radius:50%;background:#ffffff22}
+  .kartu .ik{width:58px;height:58px;border-radius:18px;background:#fff;display:grid;place-items:center}
+  .kartu .ik svg{width:32px;height:32px}
+  .kartu h3{font-size:1.6rem}
+  .kartu p{opacity:.95;flex:1;font-weight:600}
+  .kartu .go{align-self:flex-start;background:#fff;padding:7px 16px;border-radius:999px;font-weight:800}
+  .k-yt{background:linear-gradient(145deg,#ff3355,#ff0033 60%,#d10029)} .k-yt .ik,.k-yt .go{color:var(--yt)}
+  .k-tt{background:linear-gradient(145deg,#2b2b33,#111)} .k-tt .ik,.k-tt .go{color:#111}
+  .k-tt{box-shadow:-5px 5px 0 #25f4ee,5px -5px 0 #fe2c55,0 14px 30px rgba(0,0,0,.15)}
+  .k-rb{background:linear-gradient(145deg,#4db0ff,#1e88ff 60%,#1466d6)} .k-rb .ik,.k-rb .go{color:var(--rb)}
   @media(max-width:820px){.platform{grid-template-columns:1fr}}
 
-  /* EPISODE */
-  #youtube{background:#fff}
-  .ep-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
+  /* ===== YOUTUBE ===== */
+  #youtube{background:#fff6dc;background-image:radial-gradient(#ffd77a 1.6px,transparent 1.6px);background-size:22px 22px}
+  .ep-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:16px}
   @media(max-width:420px){.ep-grid{grid-template-columns:1fr 1fr}}
-  .ep{display:block;text-decoration:none;border-radius:20px;overflow:hidden;background:var(--cream);box-shadow:0 4px 14px rgba(59,42,51,.08);transition:transform .2s}
-  .ep:hover{transform:translateY(-4px) rotate(-.5deg)}
-  .ep .th{position:relative;aspect-ratio:9/12;background-color:var(--pink-l);background-position:center;background-size:cover;background-repeat:no-repeat}
-  .ep .th::after{content:"▶";position:absolute;inset:auto 10px 10px auto;width:38px;height:38px;border-radius:50%;background:var(--yt);color:#fff;display:grid;place-items:center;font-size:.9rem;box-shadow:0 3px 8px rgba(0,0,0,.25)}
-  .ep .no{position:absolute;top:10px;left:10px;background:#fff;color:var(--pink-d);font-weight:800;border-radius:999px;padding:2px 10px;font-size:.8rem}
-  .ep .nm{padding:10px 12px;font-weight:800;font-family:'Baloo 2';font-size:1.08rem}
-  .tengah{text-align:center;margin-top:30px}
+  .ep{display:block;text-decoration:none;border-radius:22px;overflow:hidden;background:#fff;border:4px solid var(--c,#ff5fa2);box-shadow:0 6px 0 var(--c,#ff5fa2);transition:transform .2s}
+  .ep:nth-child(4n+1){--c:#ff5fa2;transform:rotate(-1.2deg)} .ep:nth-child(4n+2){--c:#3aa8ff;transform:rotate(1deg)}
+  .ep:nth-child(4n+3){--c:#3ccf8e;transform:rotate(-.6deg)} .ep:nth-child(4n){--c:#ff8a3d;transform:rotate(1.3deg)}
+  .ep:hover{transform:translateY(-6px) rotate(0) scale(1.03)}
+  .ep .th{position:relative;aspect-ratio:9/11;background-color:var(--pink-l);background-position:center;background-size:cover}
+  .ep .th::after{content:"▶";position:absolute;right:10px;bottom:10px;width:40px;height:40px;border-radius:50%;background:var(--yt);color:#fff;display:grid;place-items:center;font-size:.95rem;box-shadow:0 3px 8px rgba(0,0,0,.25)}
+  .ep .no{position:absolute;top:10px;left:10px;background:var(--c);color:#fff;font-weight:800;border-radius:999px;padding:3px 11px;font-size:.8rem}
+  .ep .nm{padding:9px 12px 11px;font-weight:800;font-family:var(--judul);font-size:1.1rem;text-align:center}
+  .tengah{text-align:center;margin-top:34px}
 
-  /* TIKTOK */
-  #tiktok{background:linear-gradient(135deg,#1b1b1f,#2b1830)}
-  #tiktok .judul h2,#tiktok .judul p{color:#fff}
-  #tiktok .judul p{opacity:.8}
-  .tt-box{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:center}
-  .hp{margin:0 auto;width:240px;aspect-ratio:9/18;border-radius:34px;background:#000;border:8px solid #333;position:relative;overflow:hidden;box-shadow:-6px 6px 0 #25f4ee,6px -6px 0 #fe2c55}
-  .hp .layar{position:absolute;inset:0;background:linear-gradient(170deg,#ffd6e8,#ff8fc0);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:#fff;text-align:center;padding:20px}
-  .hp .layar b{font-family:'Baloo 2';font-size:1.6rem;text-shadow:0 2px 0 var(--pink-d)}
+  /* ===== TIKTOK ===== */
+  #tiktok{background:radial-gradient(circle at 15% 20%,#fe2c5533 0,transparent 35%),radial-gradient(circle at 85% 80%,#25f4ee33 0,transparent 35%),linear-gradient(135deg,#17171c,#2a1530)}
+  #tiktok .judul h2{color:#fff;text-shadow:-2px 2px 0 #fe2c55,2px -2px 0 #25f4ee}
+  #tiktok .judul p{color:#fff;opacity:.8}
+  .tt-box{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+  .hp{margin:0 auto;width:240px;aspect-ratio:9/18;border-radius:36px;background:#000;border:9px solid #2c2c33;position:relative;overflow:hidden;box-shadow:-8px 8px 0 #25f4ee,8px -8px 0 #fe2c55;animation:goyang 4s ease-in-out infinite}
+  .hp .layar{position:absolute;inset:0;background:linear-gradient(170deg,#ffd6e8,#ff8fc0);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;padding:20px}
+  .hp .layar img{width:88%}
+  .hp .layar b{font-family:var(--judul);font-size:1.5rem;color:#fff;text-shadow:0 2px 0 var(--pink-d)}
+  .hp .timer{background:#fff;color:var(--pink-d);font-weight:800;border-radius:999px;padding:3px 12px}
   .hp .samping{position:absolute;right:10px;bottom:70px;display:flex;flex-direction:column;gap:14px;font-size:1.4rem}
-  .tt-poin{color:#fff;display:flex;flex-direction:column;gap:14px}
-  .tt-poin li{list-style:none;display:flex;gap:12px;align-items:flex-start;background:rgba(255,255,255,.07);padding:14px 16px;border-radius:16px}
-  .tt-poin li span{font-size:1.5rem}
-  .tt-handle{font-family:'Baloo 2';font-size:1.7rem;font-weight:800;color:#fff}
+  .tt-handle{font-family:var(--judul);font-size:1.8rem;font-weight:800;color:#fff}
   .tt-handle em{font-style:normal;color:#25f4ee}
-  @media(max-width:760px){.tt-box{grid-template-columns:1fr}}
+  .tt-poin{color:#fff;display:flex;flex-direction:column;gap:12px;margin:18px 0 22px}
+  .tt-poin li{list-style:none;display:flex;gap:12px;align-items:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);padding:13px 16px;border-radius:18px}
+  .tt-poin li span{font-size:1.6rem}
+  .tt-poin small{opacity:.8}
+  @media(max-width:760px){.tt-box{grid-template-columns:1fr;text-align:center}.tt-poin li{text-align:left}}
 
-  /* ROBLOX */
-  #roblox{background:linear-gradient(180deg,#e9f3ff,#fff)}
-  .rb-hero{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;margin-bottom:34px}
-  .rb-poster{border-radius:28px;aspect-ratio:16/10;background:linear-gradient(160deg,#7cc6ff,#b4f0c8 70%,#ffe6a8);position:relative;overflow:hidden;box-shadow:0 14px 34px rgba(30,136,255,.22)}
-  .rb-poster .judul-game{position:absolute;left:0;right:0;top:18px;text-align:center;font-family:'Baloo 2';font-weight:800;color:#fff;font-size:clamp(1.5rem,3.5vw,2.2rem);text-shadow:0 3px 0 #1e5fbf,0 6px 14px rgba(0,0,0,.2)}
-  .rb-poster .pets{position:absolute;bottom:16px;left:0;right:0;display:flex;justify-content:center;gap:12px;font-size:clamp(2rem,6vw,3.2rem)}
-  .rb-poster .pets span:nth-child(odd){animation:naik 2.6s ease-in-out infinite}
-  .rb-poster .pets span:nth-child(even){animation:naik 2.6s ease-in-out infinite .6s}
-  .rb-poster .awan{position:absolute;font-size:2.4rem;opacity:.9}
-  .status{display:inline-block;margin-top:10px;font-weight:700;font-size:.9rem;padding:6px 12px;border-radius:12px;background:#fff4d6;color:#8a6200}
+  /* ===== ROBLOX ===== */
+  #roblox{background:linear-gradient(180deg,#d9efff,#f2f9ff 70%,#fff)}
+  .rb-hero{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;margin-bottom:34px}
+  .rb-poster{border-radius:30px;aspect-ratio:16/10;background:linear-gradient(180deg,#7cc6ff 0%,#a8dcff 55%,#7fdc9b 56%,#5cc77f 100%);position:relative;overflow:hidden;box-shadow:0 16px 36px rgba(30,136,255,.25);border:5px solid #fff}
+  .rb-poster .judul-game{position:absolute;left:0;right:0;top:14px;text-align:center;font-family:var(--judul);font-weight:800;color:#fff;font-size:clamp(1.4rem,3.5vw,2.1rem);text-shadow:0 3px 0 #1e5fbf,0 6px 14px rgba(0,0,0,.2)}
+  .rb-poster .pets{position:absolute;bottom:14%;left:0;right:0;display:flex;justify-content:center;gap:10px;font-size:clamp(2rem,6vw,3.1rem)}
+  .rb-poster .pets span{animation:loncat 1.8s ease-in-out infinite}
+  .rb-poster .pets span:nth-child(2){animation-delay:.2s}.rb-poster .pets span:nth-child(3){animation-delay:.4s}.rb-poster .pets span:nth-child(4){animation-delay:.6s}.rb-poster .pets span:nth-child(5){animation-delay:.8s}
+  .rb-poster .pelangi{position:absolute;top:22%;left:50%;transform:translateX(-50%);width:70%;aspect-ratio:2;border-radius:999px 999px 0 0;
+    background:radial-gradient(circle at 50% 100%,transparent 52%,#a06cff 52% 58%,#3aa8ff 58% 64%,#3ccf8e 64% 70%,#ffc93c 70% 76%,#ff8a3d 76% 82%,#ff5fa2 82% 88%,transparent 88%);opacity:.6}
+  .rb-teks h3{font-size:1.65rem;color:#1e5fbf;margin-bottom:8px}
+  .rb-teks p{color:var(--abu);margin-bottom:18px;font-weight:600}
+  .status{display:inline-block;margin-top:12px;font-weight:800;font-size:.9rem;padding:6px 14px;border-radius:12px;background:#fff4d6;color:#8a6200}
   .fitur{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-  .f{background:#fff;border-radius:20px;padding:20px;box-shadow:0 6px 18px rgba(30,136,255,.09);text-align:center}
-  .f .em{font-size:2.2rem}
-  .f h3{font-size:1.15rem;margin:6px 0 4px;color:#1e5fbf}
-  .f p{font-size:.92rem;color:var(--abu)}
+  .f{background:#fff;border-radius:22px;padding:20px 16px;text-align:center;box-shadow:0 8px 0 var(--c),0 12px 24px rgba(30,136,255,.1);border:3px solid var(--c)}
+  .f .em{font-size:2.3rem;display:inline-block;animation:goyang 3s ease-in-out infinite}
+  .f h3{font-size:1.15rem;margin:6px 0 4px;color:var(--c)}
+  .f p{font-size:.92rem;color:var(--abu);font-weight:600}
   @media(max-width:820px){.rb-hero{grid-template-columns:1fr}.fitur{grid-template-columns:1fr 1fr}}
 
-  /* ORANG TUA */
-  #ortu .ortu{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-  #ortu .o{background:#fff;border-radius:22px;padding:22px;border:2px dashed var(--pink-l)}
-  #ortu .o h3{color:var(--pink-d);font-size:1.25rem;margin-bottom:6px}
-  #ortu .o p{color:var(--abu);font-size:.97rem}
-  @media(max-width:820px){#ortu .ortu{grid-template-columns:1fr}}
+  /* ===== ORANG TUA ===== */
+  #ortu{background:#fff}
+  .ortu{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .o{border-radius:24px;padding:22px;background:var(--bg);position:relative;overflow:hidden}
+  .o .em{font-size:2rem;width:56px;height:56px;border-radius:18px;background:#fff;display:grid;place-items:center;margin-bottom:10px;box-shadow:0 4px 10px rgba(0,0,0,.06)}
+  .o h3{font-size:1.25rem;margin-bottom:4px}
+  .o p{color:#5d4b55;font-size:.97rem;font-weight:600}
+  @media(max-width:820px){.ortu{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.ortu{grid-template-columns:1fr}}
 
-  /* FOOTER */
-  footer{background:var(--pink-d);color:#fff;padding:44px 0 30px;text-align:center}
-  footer h3{font-size:1.8rem}
+  /* ===== FOOTER ===== */
+  footer{position:relative;background:linear-gradient(135deg,var(--pink),var(--pink-d));color:#fff;padding:30px 0 30px;text-align:center}
+  footer .ombak-atas{position:absolute;left:0;right:0;top:-59px;line-height:0}
+  footer .ombak-atas svg{width:100%;height:60px;display:block}
+  footer img{width:120px;filter:drop-shadow(0 6px 10px rgba(0,0,0,.2))}
+  footer h3{font-size:1.9rem}
   footer .sos{display:flex;justify-content:center;gap:14px;margin:18px 0}
-  footer .sos a{width:52px;height:52px;border-radius:50%;background:#fff;display:grid;place-items:center;transition:transform .15s}
-  footer .sos a:hover{transform:scale(1.1)}
-  footer .sos svg{width:26px;height:26px}
-  footer small{opacity:.85}
+  footer .sos a{width:54px;height:54px;border-radius:50%;background:#fff;display:grid;place-items:center;transition:transform .15s;box-shadow:0 5px 0 rgba(0,0,0,.15)}
+  footer .sos a:hover{transform:scale(1.12) rotate(-6deg)}
+  footer .sos svg{width:27px;height:27px}
+  footer small{opacity:.9}
 
-  /* BAR BAWAH (HP) */
-  .bar{position:fixed;left:0;right:0;bottom:0;z-index:60;background:#fff;box-shadow:0 -6px 20px rgba(0,0,0,.08);display:grid;grid-template-columns:repeat(3,1fr);padding:8px 8px calc(8px + env(safe-area-inset-bottom))}
-  .bar a{display:flex;flex-direction:column;align-items:center;gap:2px;text-decoration:none;font-weight:800;font-size:.78rem;padding:6px 0;border-radius:14px}
-  .bar a svg{width:26px;height:26px}
+  /* ===== BAR BAWAH (HP) ===== */
+  .bar{position:fixed;left:10px;right:10px;bottom:10px;z-index:60;background:#fff;border-radius:22px;box-shadow:0 8px 28px rgba(0,0,0,.15);display:grid;grid-template-columns:repeat(3,1fr);padding:6px;padding-bottom:calc(6px + env(safe-area-inset-bottom))}
+  .bar a{display:flex;flex-direction:column;align-items:center;gap:2px;text-decoration:none;font-weight:800;font-size:.78rem;padding:6px 0;border-radius:16px}
+  .bar a svg{width:25px;height:25px}
   .bar a:active{background:var(--pink-l)}
   @media(min-width:900px){.bar{display:none}body{padding-bottom:0}}
+
+  /* muncul saat di-scroll */
+  .muncul{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+  .muncul.on{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){*{animation:none!important}.muncul{opacity:1;transform:none}}
 </style>
 </head>
 <body>
 
-<!-- ===== LINK (ubah di sini saja kalau ada yang berubah) ===== -->
 <script>
   const LINK = {
     youtube:  "https://www.youtube.com/@GeniceLilo",
     subscribe:"https://www.youtube.com/@GeniceLilo?sub_confirmation=1",
     tiktok:   "https://www.tiktok.com/@genicelilo",
-    // Ganti dengan link game langsung, contoh: https://www.roblox.com/games/1234567890/Genices-Pet-Paradise
     roblox:   "https://www.roblox.com/discover/?Keyword=Genice%27s%20Pet%20Paradise",
-    robloxBuka: false   // ubah ke true kalau game sudah Public
+    robloxBuka: false
   };
 </script>
 
-<nav>
-  <div class="wrap">
-    <a class="logo" href="#">Genice <span>&</span> Lilo</a>
-    <div class="menu">
-      <a href="#youtube">YouTube</a>
-      <a href="#tiktok">TikTok</a>
-      <a href="#roblox">Roblox</a>
-      <a href="#ortu">Untuk Orang Tua</a>
-    </div>
-  </div>
-</nav>
-
-<!-- HERO -->
-<header class="hero">
-  <span class="deco" style="top:12%;left:4%">⭐</span>
-  <span class="deco" style="top:70%;left:46%;animation-delay:1s">🌈</span>
-  <span class="deco" style="top:18%;right:5%;animation-delay:2s">🎈</span>
-  <div class="wrap">
-    <div>
-      <h1><small>Halo teman-teman! 👋</small>Belajar seru bareng Genice & Lilo</h1>
-      <p>Belajar warna, angka, huruf, hewan, dan banyak lagi bersama Genice dan anjing poodle kesayangannya, Lilo 🐩💗 Tonton videonya, lalu main game-nya!</p>
-      <div class="btns">
-        <a class="btn b-yt" data-link="youtube" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>YouTube</a>
-        <a class="btn b-tt" data-link="tiktok" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 6.7a4.8 4.8 0 0 1-3.8-4.2V2h-3.4v13.4a2.9 2.9 0 1 1-2-2.7V9.2a6.3 6.3 0 1 0 5.4 6.2V8.6a8.2 8.2 0 0 0 4.8 1.5V6.7h-1z"/></svg>TikTok</a>
-        <a class="btn b-rb" data-link="roblox" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.2 1 1 18.8 18.8 23 23 5.2 5.2 1zm8.9 13.6-4.7-1.2 1.2-4.7 4.7 1.2-1.2 4.7z"/></svg>Main Roblox</a>
-      </div>
-    </div>
-
-    <div class="duo">
-      <div class="bubble a float">Ayo belajar! 💗</div>
-      <div class="bubble b float2">Guk guk! 🐾</div>
-      <img class="foto float" src="genice-lilo.webp" alt="Genice dan Lilo">
-    </div>
-  </div>
+<header class="atas">
+  <a class="logo-baris" href="#">
+    <img src="genice-lilo.webp" alt="">
+    <span class="logo-teks">Genice <b>&amp;</b> Lilo</span>
+  </a>
+  <nav class="menu">
+    <a href="#youtube">▶ YouTube</a>
+    <a href="#tiktok">♪ TikTok</a>
+    <a href="#roblox">🎮 Roblox</a>
+    <a href="#ortu">💌 Orang Tua</a>
+  </nav>
 </header>
 
-
-<!-- TOPIK -->
-<section style="padding:44px 0 10px">
+<!-- HERO -->
+<div class="hero">
+  <div class="awan" style="top:40px;width:90px"></div>
+  <div class="awan" style="top:180px;width:70px;animation-duration:55s;animation-delay:-20s"></div>
+  <span class="hias" style="top:8%;left:6%">⭐</span>
+  <span class="hias" style="top:30%;right:7%;animation-delay:1s">💗</span>
+  <span class="hias" style="top:56%;left:4%;animation-delay:2s">🎈</span>
+  <span class="hias" style="top:62%;right:5%;animation-delay:.5s">✨</span>
   <div class="wrap">
-    <div class="judul" style="margin-bottom:20px"><h2>Belajar apa saja? 📚</h2></div>
-    <div class="topik">
-      <span>🎨 Warna</span><span>🔢 Angka</span><span>🔤 Huruf</span><span>🐘 Hewan</span><span>🍎 Buah</span><span>🔺 Bentuk</span><span>🚗 Kendaraan</span><span>🥕 Sayur</span><span>🇬🇧 Bahasa Inggris</span>
+    <div class="panggung">
+      <div class="sinar"></div>
+      <div class="matahari"></div>
+      <img src="genice-lilo.webp" alt="Genice dan Lilo">
+      <div class="gelembung g1">Ayo belajar! 💗</div>
+      <div class="gelembung g2">Guk guk! 🐾</div>
+    </div>
+    <span class="salam">👋 Halo teman-teman!</span>
+    <h1>Belajar <span class="warna"><span>S</span><span style="animation-delay:.1s">e</span><span style="animation-delay:.2s">r</span><span style="animation-delay:.3s">u</span></span><br>bareng Genice &amp; Lilo</h1>
+    <p class="isi">Kenalan sama warna, angka, huruf, hewan, dan Bahasa Inggris bersama Genice dan poodle kesayangannya, Lilo 🐩💗 Tonton videonya, lalu main game-nya!</p>
+    <div class="btns">
+      <a class="btn b-yt" data-link="youtube" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>YouTube</a>
+      <a class="btn b-tt" data-link="tiktok" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 6.7a4.8 4.8 0 0 1-3.8-4.2V2h-3.4v13.4a2.9 2.9 0 1 1-2-2.7V9.2a6.3 6.3 0 1 0 5.4 6.2V8.6a8.2 8.2 0 0 0 4.8 1.5V6.7h-1z"/></svg>TikTok</a>
+      <a class="btn b-rb" data-link="roblox" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.2 1 1 18.8 18.8 23 23 5.2 5.2 1zm8.9 13.6-4.7-1.2 1.2-4.7 4.7 1.2-1.2 4.7z"/></svg>Main Roblox</a>
     </div>
   </div>
-</section>
+  <div class="ombak"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,40 C240,90 480,0 720,36 C960,72 1200,10 1440,44 L1440,80 L0,80 Z" fill="#fffaf4"/></svg></div>
+</div>
+
+<!-- TOPIK -->
+<div class="topik-wrap">
+  <h2>Belajar apa saja? 📚</h2>
+  <div class="jalan" id="jalan"></div>
+</div>
 
 <!-- PLATFORM -->
 <section>
   <div class="wrap">
-    <div class="judul">
-      <span class="tag" style="background:var(--pink-l);color:var(--pink-d)">Temukan kami di sini</span>
+    <div class="judul muncul">
       <h2>Satu klik, langsung masuk! 🚀</h2>
+      <span class="garis"></span>
     </div>
     <div class="platform">
-      <a class="kartu k-yt" data-link="youtube" target="_blank" rel="noopener">
-        <div class="ik"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg></div>
-        <h3>YouTube</h3>
-        <p>Episode baru tiap Senin & Kamis, plus video tebak-tebakan setiap hari.</p>
+      <a class="kartu k-yt muncul" data-link="youtube" target="_blank" rel="noopener">
+        <div class="ik"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg></div><h3>YouTube</h3>
+        <p>Video baru setiap hari jam 17.00, plus episode lengkap tiap Senin &amp; Kamis.</p>
         <span class="go">@GeniceLilo →</span>
       </a>
-      <a class="kartu k-tt" data-link="tiktok" target="_blank" rel="noopener">
-        <div class="ik"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 6.7a4.8 4.8 0 0 1-3.8-4.2V2h-3.4v13.4a2.9 2.9 0 1 1-2-2.7V9.2a6.3 6.3 0 1 0 5.4 6.2V8.6a8.2 8.2 0 0 0 4.8 1.5V6.7h-1z"/></svg></div>
-        <h3>TikTok</h3>
-        <p>Video pendek seru setiap hari jam 19.00. Tantangan 3 detik, tebak hewan, dan lainnya!</p>
+      <a class="kartu k-tt muncul" data-link="tiktok" target="_blank" rel="noopener">
+        <div class="ik"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 6.7a4.8 4.8 0 0 1-3.8-4.2V2h-3.4v13.4a2.9 2.9 0 1 1-2-2.7V9.2a6.3 6.3 0 1 0 5.4 6.2V8.6a8.2 8.2 0 0 0 4.8 1.5V6.7h-1z"/></svg></div><h3>TikTok</h3>
+        <p>Video pendek seru setiap hari jam 19.00. Tantangan 3 detik &amp; tebak hewan!</p>
         <span class="go">@genicelilo →</span>
       </a>
-      <a class="kartu k-rb" data-link="roblox" target="_blank" rel="noopener">
-        <div class="ik"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.2 1 1 18.8 18.8 23 23 5.2 5.2 1zm8.9 13.6-4.7-1.2 1.2-4.7 4.7 1.2-1.2 4.7z"/></svg></div>
-        <h3>Roblox</h3>
-        <p>Main game <b>Genice's Pet Paradise</b>: tetaskan telur, rawat pet, dan cari 31 pet lucu!</p>
+      <a class="kartu k-rb muncul" data-link="roblox" target="_blank" rel="noopener">
+        <div class="ik"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.2 1 1 18.8 18.8 23 23 5.2 5.2 1zm8.9 13.6-4.7-1.2 1.2-4.7 4.7 1.2-1.2 4.7z"/></svg></div><h3>Roblox</h3>
+        <p>Main <b>Genice's Pet Paradise</b>: tetaskan telur, rawat pet, cari 31 pet lucu!</p>
         <span class="go">Main sekarang →</span>
       </a>
     </div>
@@ -244,41 +288,39 @@
 <!-- YOUTUBE -->
 <section id="youtube">
   <div class="wrap">
-    <div class="judul">
-      <span class="tag" style="background:#ffe0e6;color:var(--yt)">▶ YouTube</span>
-      <h2>Tonton episode Genice & Lilo</h2>
+    <div class="judul muncul">
+      <span class="tag" style="background:var(--yt);color:#fff">▶ YouTube</span>
+      <h2>Tonton episode Genice &amp; Lilo</h2>
       <p>Klik salah satu untuk langsung menonton di YouTube.</p>
     </div>
     <div class="ep-grid" id="epGrid"></div>
-    <div class="tengah">
-      <a class="btn b-yt" data-link="subscribe" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 22a2 2 0 0 0 2-2h-4a2 2 0 0 0 2 2zm6-6V11c0-3.1-1.6-5.6-4.5-6.3V4a1.5 1.5 0 0 0-3 0v.7C7.6 5.4 6 7.9 6 11v5l-2 2v1h16v-1l-2-2z"/></svg>Subscribe gratis</a>
-    </div>
+    <div class="tengah"><a class="btn b-yt" data-link="subscribe" target="_blank" rel="noopener">🔔 Subscribe gratis</a></div>
   </div>
 </section>
 
 <!-- TIKTOK -->
 <section id="tiktok">
   <div class="wrap">
-    <div class="judul">
+    <div class="judul muncul">
       <span class="tag" style="background:#25f4ee;color:#111">♪ TikTok</span>
-      <h2>Ikuti Genice & Lilo di TikTok</h2>
+      <h2>Ikuti kami di TikTok</h2>
       <p>Video baru setiap hari, singkat dan seru untuk ditonton bareng si kecil.</p>
     </div>
     <div class="tt-box">
       <div class="hp">
         <div class="layar">
-          <div style="font-size:3.4rem">🐩💗</div>
+          <span class="timer">⏱️ 3 detik!</span>
+          <img src="genice-lilo.webp" alt="">
           <b>Tebak hewan apa ini?</b>
-          <div style="font-weight:700">Tantangan 3 Detik ⏱️</div>
         </div>
         <div class="samping"><span>❤️</span><span>💬</span><span>↗️</span></div>
       </div>
-      <div>
+      <div class="muncul">
         <div class="tt-handle">TikTok <em>@genicelilo</em></div>
-        <ul class="tt-poin" style="margin:18px 0 22px">
-          <li><span>⏱️</span><div><b>Tantangan 3 Detik</b><br><small style="opacity:.8">Bisa jawab sebelum waktunya habis?</small></div></li>
-          <li><span>🐶</span><div><b>Tebak-tebakan</b><br><small style="opacity:.8">Hewan, buah, warna, huruf, dan angka.</small></div></li>
-          <li><span>📅</span><div><b>Tayang setiap hari 19.00 WIB</b><br><small style="opacity:.8">Episode lengkap setiap Selasa & Jumat.</small></div></li>
+        <ul class="tt-poin">
+          <li><span>⏱️</span><div><b>Tantangan 3 Detik</b><br><small>Bisa jawab sebelum waktunya habis?</small></div></li>
+          <li><span>🐶</span><div><b>Tebak-tebakan</b><br><small>Hewan, buah, warna, huruf, dan angka.</small></div></li>
+          <li><span>📅</span><div><b>Tayang setiap hari 19.00 WIB</b><br><small>Episode lengkap setiap Selasa &amp; Jumat.</small></div></li>
         </ul>
         <a class="btn b-putih" data-link="tiktok" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 6.7a4.8 4.8 0 0 1-3.8-4.2V2h-3.4v13.4a2.9 2.9 0 1 1-2-2.7V9.2a6.3 6.3 0 1 0 5.4 6.2V8.6a8.2 8.2 0 0 0 4.8 1.5V6.7h-1z"/></svg>Follow di TikTok</a>
       </div>
@@ -289,30 +331,29 @@
 <!-- ROBLOX -->
 <section id="roblox">
   <div class="wrap">
-    <div class="judul">
-      <span class="tag" style="background:#d6e9ff;color:#1e5fbf">🎮 Roblox</span>
+    <div class="judul muncul">
+      <span class="tag" style="background:var(--rb);color:#fff">🎮 Roblox</span>
       <h2>Genice's Pet Paradise</h2>
       <p>Game Roblox buatan Genice! Kumpulkan dan rawat pet lucu di dunia yang penuh warna.</p>
     </div>
     <div class="rb-hero">
-      <div class="rb-poster">
-        <span class="awan" style="top:62px;left:18px">☁️</span>
-        <span class="awan" style="top:80px;right:24px">☁️</span>
+      <div class="rb-poster muncul">
+        <div class="pelangi"></div>
         <div class="judul-game">Genice's Pet Paradise</div>
         <div class="pets"><span>🐶</span><span>🐱</span><span>🦄</span><span>🐼</span><span>🐰</span></div>
       </div>
-      <div>
-        <h3 style="font-size:1.6rem;color:#1e5fbf;margin-bottom:8px">Tetaskan telur, temukan pet rahasia! 🥚✨</h3>
-        <p style="color:var(--abu);margin-bottom:18px">Rawat pet-mu, selesaikan misi setiap hari, jelajahi obby, labirin, gua pantai sampai istana awan, lalu lengkapi Buku Koleksi. Login 7 hari berturut-turut untuk mendapatkan <b>Alicorn</b>, unicorn bersayap yang bisa dinaiki terbang!</p>
-        <a class="btn b-rb" data-link="roblox" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>Main di Roblox</a>
-        <div><span class="status" id="rbStatus">🔜 Segera dibuka untuk semua pemain</span></div>
+      <div class="rb-teks muncul">
+        <h3>Tetaskan telur, temukan pet rahasia! 🥚✨</h3>
+        <p>Rawat pet-mu, selesaikan misi setiap hari, jelajahi obby, labirin, gua pantai sampai istana awan, lalu lengkapi Buku Koleksi. Login 7 hari berturut-turut untuk mendapatkan <b>Alicorn</b>, unicorn bersayap yang bisa dinaiki terbang!</p>
+        <a class="btn b-rb" data-link="roblox" target="_blank" rel="noopener">▶ Main di Roblox</a><br>
+        <span class="status" id="rbStatus">🔜 Segera dibuka untuk semua pemain</span>
       </div>
     </div>
     <div class="fitur">
-      <div class="f"><div class="em">🐾</div><h3>31 Pet</h3><p>Dari yang biasa sampai pet rahasia yang tersembunyi.</p></div>
-      <div class="f"><div class="em">📅</div><h3>Hadiah Harian</h3><p>Login tiap hari, hadiahnya makin besar.</p></div>
-      <div class="f"><div class="em">🎯</div><h3>Misi Harian</h3><p>3 misi baru setiap hari & bonus mingguan.</p></div>
-      <div class="f"><div class="em">📖</div><h3>Buku Koleksi</h3><p>Lengkapi koleksi, dapat 10.000 koin!</p></div>
+      <div class="f muncul" style="--c:#ff5fa2"><div class="em">🐾</div><h3>31 Pet</h3><p>Dari yang biasa sampai pet rahasia yang tersembunyi.</p></div>
+      <div class="f muncul" style="--c:#3aa8ff"><div class="em" style="animation-delay:.4s">📅</div><h3>Hadiah Harian</h3><p>Login tiap hari, hadiahnya makin besar.</p></div>
+      <div class="f muncul" style="--c:#3ccf8e"><div class="em" style="animation-delay:.8s">🎯</div><h3>Misi Harian</h3><p>3 misi baru setiap hari &amp; bonus mingguan.</p></div>
+      <div class="f muncul" style="--c:#ff8a3d"><div class="em" style="animation-delay:1.2s">📖</div><h3>Buku Koleksi</h3><p>Lengkapi koleksi, dapat 10.000 koin!</p></div>
     </div>
   </div>
 </section>
@@ -320,57 +361,58 @@
 <!-- ORANG TUA -->
 <section id="ortu">
   <div class="wrap">
-    <div class="judul">
-      <span class="tag" style="background:var(--pink-l);color:var(--pink-d)">💌 Untuk Ayah & Bunda</span>
+    <div class="judul muncul">
+      <span class="tag" style="background:var(--pink-l);color:var(--pink-d)">💌 Untuk Ayah &amp; Bunda</span>
       <h2>Kenapa anak suka? 🥰</h2>
+      <span class="garis"></span>
     </div>
     <div class="ortu">
-      <div class="o"><h3>💗 Suara asli</h3><p>Suara Genice diisi oleh anak kami sendiri, bukan suara AI.</p></div>
-      <div class="o"><h3>🕵️ Tebak bayangan</h3><p>Anak menebak benda dari bayangannya dulu sebelum gambarnya muncul.</p></div>
-      <div class="o"><h3>🇮🇩🇬🇧 Dua bahasa</h3><p>Setiap kata diucapkan dalam Bahasa Indonesia dan Bahasa Inggris.</p></div>
-      <div class="o"><h3>🛡️ Ramah anak</h3><p>Video pendek dan ceria, ditandai "dibuat untuk anak" di YouTube.</p></div>
-      <div class="o"><h3>📅 Rutin</h3><p>Episode baru setiap Senin & Kamis, video pendek setiap hari.</p></div>
-      <div class="o"><h3>👨‍👩‍👧 Tonton bersama</h3><p>Ajak si kecil menjawab tebakan bareng. Game Roblox sebaiknya dimainkan dengan pendampingan orang tua.</p></div>
+      <div class="o muncul" style="--bg:#ffe3ef"><div class="em">💗</div><h3>Suara asli</h3><p>Suara Genice diisi oleh anak kami sendiri, bukan suara AI.</p></div>
+      <div class="o muncul" style="--bg:#e6f3ff"><div class="em">🕵️</div><h3>Tebak bayangan</h3><p>Anak menebak benda dari bayangannya dulu sebelum gambarnya muncul.</p></div>
+      <div class="o muncul" style="--bg:#fff3d1"><div class="em">🗣️</div><h3>Dua bahasa</h3><p>Setiap kata diucapkan dalam Bahasa Indonesia dan Bahasa Inggris.</p></div>
+      <div class="o muncul" style="--bg:#e3f8ee"><div class="em">🛡️</div><h3>Ramah anak</h3><p>Video pendek dan ceria, ditandai "dibuat untuk anak" di YouTube.</p></div>
+      <div class="o muncul" style="--bg:#efe8ff"><div class="em">📅</div><h3>Rutin</h3><p>Video baru setiap hari di YouTube &amp; TikTok, episode lengkap tiap Senin &amp; Kamis.</p></div>
+      <div class="o muncul" style="--bg:#ffe9dc"><div class="em">👨‍👩‍👧</div><h3>Tonton bersama</h3><p>Ajak si kecil menjawab tebakan bareng. Game Roblox sebaiknya dengan pendampingan orang tua.</p></div>
     </div>
   </div>
 </section>
 
 <footer>
+  <div class="ombak-atas"><svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,30 C240,0 480,60 720,30 C960,0 1200,50 1440,24 L1440,60 L0,60 Z" fill="#ff5fa2"/></svg></div>
   <div class="wrap">
-    <h3>Genice & Lilo 🐩💗</h3>
+    <img src="genice-lilo.webp" alt="Genice dan Lilo">
+    <h3>Genice &amp; Lilo</h3>
+    <div>Belajar sambil bermain 🐩💗</div>
     <div class="sos">
       <a data-link="youtube" target="_blank" rel="noopener" aria-label="YouTube" style="color:var(--yt)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg></a>
       <a data-link="tiktok" target="_blank" rel="noopener" aria-label="TikTok" style="color:#111"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 6.7a4.8 4.8 0 0 1-3.8-4.2V2h-3.4v13.4a2.9 2.9 0 1 1-2-2.7V9.2a6.3 6.3 0 1 0 5.4 6.2V8.6a8.2 8.2 0 0 0 4.8 1.5V6.7h-1z"/></svg></a>
       <a data-link="roblox" target="_blank" rel="noopener" aria-label="Roblox" style="color:var(--rb)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.2 1 1 18.8 18.8 23 23 5.2 5.2 1zm8.9 13.6-4.7-1.2 1.2-4.7 4.7 1.2-1.2 4.7z"/></svg></a>
     </div>
-    <small>© <span id="th"></span> Genice & Lilo · Belajar sambil bermain · <a href="privacy.html" style="color:#fff">Kebijakan Privasi</a></small>
+    <small>© <span id="th"></span> Genice &amp; Lilo · <a href="privacy.html" style="color:#fff">Kebijakan Privasi</a></small>
   </div>
 </footer>
 
-<!-- Bar bawah untuk HP -->
-<div class="bar">
+<nav class="bar">
   <a data-link="youtube" target="_blank" rel="noopener" style="color:var(--yt)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>YouTube</a>
   <a data-link="tiktok" target="_blank" rel="noopener" style="color:#111"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 6.7a4.8 4.8 0 0 1-3.8-4.2V2h-3.4v13.4a2.9 2.9 0 1 1-2-2.7V9.2a6.3 6.3 0 1 0 5.4 6.2V8.6a8.2 8.2 0 0 0 4.8 1.5V6.7h-1z"/></svg>TikTok</a>
   <a data-link="roblox" target="_blank" rel="noopener" style="color:var(--rb)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.2 1 1 18.8 18.8 23 23 5.2 5.2 1zm8.9 13.6-4.7-1.2 1.2-4.7 4.7 1.2-1.2 4.7z"/></svg>Roblox</a>
-</div>
+</nav>
 
 <script>
-  // Pasang semua link dari satu tempat
   document.querySelectorAll('[data-link]').forEach(a => { a.href = LINK[a.dataset.link]; });
   if (LINK.robloxBuka) document.getElementById('rbStatus').style.display = 'none';
   document.getElementById('th').textContent = new Date().getFullYear();
 
-  // Daftar episode (tambahkan baris baru di sini setiap episode tayang)
+  // Topik berjalan
+  const TOPIK = [["🎨 Warna","#ff5fa2"],["🔢 Angka","#3aa8ff"],["🔤 Huruf","#8b6cff"],["🐘 Hewan","#3ccf8e"],["🍎 Buah","#ff6b6b"],["🔺 Bentuk","#ffb020"],["🚗 Kendaraan","#1e88ff"],["🥕 Sayur","#ff8a3d"],["🌍 Bahasa Inggris","#e2408a"]];
+  const jalan = document.getElementById('jalan');
+  [...TOPIK, ...TOPIK].forEach(([t,c]) => { const s=document.createElement('span'); s.className='chip'; s.style.background=c; s.textContent=t; jalan.appendChild(s); });
+
+  // Episode (tambah baris baru setiap episode tayang)
   const EPISODE = [
-    ["01","Warnanya Hilang!","vf2-lMmO2go"],
-    ["02","Angka 1–10","ljddbP1bLpk"],
-    ["03","Tebak Hewan","dAu4q7gtK1M"],
-    ["04","Tebak Buah","A6jkf8vT4DU"],
-    ["05","Huruf A–F","KOXDhSDZMqc"],
-    ["06","Bentuk","fbKpFmqwY0c"],
-    ["07","Kendaraan","R7nNYPSTtcc"],
-    ["08","Tubuh","fHKhnFeSp3s"],
-    ["09","Sayur","J3sc4sXGuCk"],
+    ["01","Warnanya Hilang!","vf2-lMmO2go"],["02","Angka 1–10","ljddbP1bLpk"],["03","Tebak Hewan","dAu4q7gtK1M"],
+    ["04","Tebak Buah","A6jkf8vT4DU"],["05","Huruf A–F","KOXDhSDZMqc"],["06","Bentuk","fbKpFmqwY0c"],
+    ["07","Kendaraan","R7nNYPSTtcc"],["08","Tubuh","fHKhnFeSp3s"],["09","Sayur","J3sc4sXGuCk"],
   ];
   const grid = document.getElementById('epGrid');
   EPISODE.slice().reverse().forEach(([no, nama, id]) => {
@@ -380,6 +422,10 @@
     a.innerHTML = `<div class="th" style="background-image:url(https://i.ytimg.com/vi/${id}/hqdefault.jpg)"><span class="no">EP ${no}</span></div><div class="nm">${nama}</div>`;
     grid.appendChild(a);
   });
+
+  // Animasi muncul saat di-scroll
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), {threshold:.12});
+  document.querySelectorAll('.muncul').forEach(el => io.observe(el));
 </script>
 </body>
 </html>
